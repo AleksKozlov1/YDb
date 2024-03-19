@@ -28,376 +28,393 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
-            CustomersPage = new TabPage();
-            customerInsertButton = new Button();
-            label4 = new Label();
-            customerUpdateButton = new Button();
-            label3 = new Label();
-            customerDeleteButton = new Button();
-            label2 = new Label();
-            lastNameTextBox = new TextBox();
-            middleNameTextBox = new TextBox();
-            firstNameTextBox = new TextBox();
-            ProductsPage = new TabPage();
-            productInsertButton = new Button();
-            productUpdateButton = new Button();
-            productDeleteButton = new Button();
-            label7 = new Label();
-            nameTextBox = new TextBox();
-            OrdersPage = new TabPage();
-            label18 = new Label();
-            OrdersProductsPage = new TabPage();
-            label16 = new Label();
-            statusStrip1 = new StatusStrip();
-            toolStripStatusLabel1 = new ToolStripStatusLabel();
-            panel1 = new Panel();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
-            tabControl1.SuspendLayout();
-            CustomersPage.SuspendLayout();
-            ProductsPage.SuspendLayout();
-            OrdersPage.SuspendLayout();
-            OrdersProductsPage.SuspendLayout();
-            statusStrip1.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.CustomersPage = new System.Windows.Forms.TabPage();
+            this.customerInsertButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.customerUpdateButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.customerDeleteButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.middleNameTextBox = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.ProductsPage = new System.Windows.Forms.TabPage();
+            this.productInsertButton = new System.Windows.Forms.Button();
+            this.productUpdateButton = new System.Windows.Forms.Button();
+            this.productDeleteButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.OrdersPage = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.OrdersProductsPage = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1.SuspendLayout();
+            this.CustomersPage.SuspendLayout();
+            this.ProductsPage.SuspendLayout();
+            this.OrdersPage.SuspendLayout();
+            this.OrdersProductsPage.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(CustomersPage);
-            tabControl1.Controls.Add(ProductsPage);
-            tabControl1.Controls.Add(OrdersPage);
-            tabControl1.Controls.Add(OrdersProductsPage);
-            tabControl1.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            tabControl1.ItemSize = new Size(131, 25);
-            tabControl1.Location = new Point(38, 164);
-            tabControl1.Margin = new Padding(3, 4, 3, 4);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(909, 334);
-            tabControl1.SizeMode = TabSizeMode.Fixed;
-            tabControl1.TabIndex = 12;
-            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
+            this.tabControl1.Controls.Add(this.CustomersPage);
+            this.tabControl1.Controls.Add(this.ProductsPage);
+            this.tabControl1.Controls.Add(this.OrdersPage);
+            this.tabControl1.Controls.Add(this.OrdersProductsPage);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabControl1.ItemSize = new System.Drawing.Size(131, 25);
+            this.tabControl1.Location = new System.Drawing.Point(33, 61);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(795, 254);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 12;
             // 
             // CustomersPage
             // 
-            CustomersPage.BackColor = Color.MediumTurquoise;
-            CustomersPage.Controls.Add(customerInsertButton);
-            CustomersPage.Controls.Add(label4);
-            CustomersPage.Controls.Add(customerUpdateButton);
-            CustomersPage.Controls.Add(label3);
-            CustomersPage.Controls.Add(customerDeleteButton);
-            CustomersPage.Controls.Add(label2);
-            CustomersPage.Controls.Add(lastNameTextBox);
-            CustomersPage.Controls.Add(middleNameTextBox);
-            CustomersPage.Controls.Add(firstNameTextBox);
-            CustomersPage.Location = new Point(4, 29);
-            CustomersPage.Margin = new Padding(3, 4, 3, 4);
-            CustomersPage.Name = "CustomersPage";
-            CustomersPage.Padding = new Padding(3, 4, 3, 4);
-            CustomersPage.Size = new Size(901, 301);
-            CustomersPage.TabIndex = 0;
-            CustomersPage.Text = "Worker";
+            this.CustomersPage.BackColor = System.Drawing.Color.Transparent;
+            this.CustomersPage.Controls.Add(this.customerInsertButton);
+            this.CustomersPage.Controls.Add(this.label4);
+            this.CustomersPage.Controls.Add(this.customerUpdateButton);
+            this.CustomersPage.Controls.Add(this.label3);
+            this.CustomersPage.Controls.Add(this.customerDeleteButton);
+            this.CustomersPage.Controls.Add(this.label2);
+            this.CustomersPage.Controls.Add(this.lastNameTextBox);
+            this.CustomersPage.Controls.Add(this.middleNameTextBox);
+            this.CustomersPage.Controls.Add(this.firstNameTextBox);
+            this.CustomersPage.Location = new System.Drawing.Point(4, 29);
+            this.CustomersPage.Name = "CustomersPage";
+            this.CustomersPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.CustomersPage.Size = new System.Drawing.Size(787, 221);
+            this.CustomersPage.TabIndex = 0;
+            this.CustomersPage.Text = "Worker";
             // 
             // customerInsertButton
             // 
-            customerInsertButton.BackColor = Color.FromArgb(0, 192, 0);
-            customerInsertButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            customerInsertButton.Location = new Point(280, 229);
-            customerInsertButton.Margin = new Padding(3, 4, 3, 4);
-            customerInsertButton.Name = "customerInsertButton";
-            customerInsertButton.Size = new Size(127, 45);
-            customerInsertButton.TabIndex = 2;
-            customerInsertButton.Text = "Insert";
-            customerInsertButton.UseVisualStyleBackColor = false;
-            customerInsertButton.Click += customerInsertButton_Click;
+            this.customerInsertButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.customerInsertButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerInsertButton.Location = new System.Drawing.Point(245, 172);
+            this.customerInsertButton.Name = "customerInsertButton";
+            this.customerInsertButton.Size = new System.Drawing.Size(111, 34);
+            this.customerInsertButton.TabIndex = 2;
+            this.customerInsertButton.Text = "Insert";
+            this.customerInsertButton.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(29, 156);
-            label4.Name = "label4";
-            label4.Size = new Size(103, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Middle Name:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(25, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Middle Name:";
             // 
             // customerUpdateButton
             // 
-            customerUpdateButton.BackColor = Color.Yellow;
-            customerUpdateButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            customerUpdateButton.Location = new Point(413, 229);
-            customerUpdateButton.Margin = new Padding(3, 4, 3, 4);
-            customerUpdateButton.Name = "customerUpdateButton";
-            customerUpdateButton.Size = new Size(127, 45);
-            customerUpdateButton.TabIndex = 3;
-            customerUpdateButton.Text = "Update ()";
-            customerUpdateButton.UseVisualStyleBackColor = false;
-            customerUpdateButton.Click += customerUpdateButton_Click;
+            this.customerUpdateButton.BackColor = System.Drawing.Color.Yellow;
+            this.customerUpdateButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerUpdateButton.Location = new System.Drawing.Point(361, 172);
+            this.customerUpdateButton.Name = "customerUpdateButton";
+            this.customerUpdateButton.Size = new System.Drawing.Size(111, 34);
+            this.customerUpdateButton.TabIndex = 3;
+            this.customerUpdateButton.Text = "Update ()";
+            this.customerUpdateButton.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(29, 98);
-            label3.Name = "label3";
-            label3.Size = new Size(83, 20);
-            label3.TabIndex = 10;
-            label3.Text = "First Name:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(25, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "First Name:";
             // 
             // customerDeleteButton
             // 
-            customerDeleteButton.BackColor = Color.Red;
-            customerDeleteButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            customerDeleteButton.Location = new Point(546, 229);
-            customerDeleteButton.Margin = new Padding(3, 4, 3, 4);
-            customerDeleteButton.Name = "customerDeleteButton";
-            customerDeleteButton.Size = new Size(127, 45);
-            customerDeleteButton.TabIndex = 4;
-            customerDeleteButton.Text = "Delete ()";
-            customerDeleteButton.UseVisualStyleBackColor = false;
-            customerDeleteButton.Click += deleteButton_Click;
+            this.customerDeleteButton.BackColor = System.Drawing.Color.Red;
+            this.customerDeleteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customerDeleteButton.Location = new System.Drawing.Point(478, 172);
+            this.customerDeleteButton.Name = "customerDeleteButton";
+            this.customerDeleteButton.Size = new System.Drawing.Size(111, 34);
+            this.customerDeleteButton.TabIndex = 4;
+            this.customerDeleteButton.Text = "Delete ()";
+            this.customerDeleteButton.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(29, 41);
-            label2.Name = "label2";
-            label2.Size = new Size(82, 20);
-            label2.TabIndex = 9;
-            label2.Text = "Last Name:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(25, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Last Name:";
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lastNameTextBox.Location = new Point(160, 38);
-            lastNameTextBox.Margin = new Padding(3, 4, 3, 4);
-            lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(109, 27);
-            lastNameTextBox.TabIndex = 6;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lastNameTextBox.Location = new System.Drawing.Point(140, 28);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(96, 23);
+            this.lastNameTextBox.TabIndex = 6;
             // 
             // middleNameTextBox
             // 
-            middleNameTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            middleNameTextBox.Location = new Point(160, 152);
-            middleNameTextBox.Margin = new Padding(3, 4, 3, 4);
-            middleNameTextBox.Name = "middleNameTextBox";
-            middleNameTextBox.Size = new Size(109, 27);
-            middleNameTextBox.TabIndex = 8;
+            this.middleNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.middleNameTextBox.Location = new System.Drawing.Point(140, 114);
+            this.middleNameTextBox.Name = "middleNameTextBox";
+            this.middleNameTextBox.Size = new System.Drawing.Size(96, 23);
+            this.middleNameTextBox.TabIndex = 8;
             // 
             // firstNameTextBox
             // 
-            firstNameTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            firstNameTextBox.Location = new Point(160, 94);
-            firstNameTextBox.Margin = new Padding(3, 4, 3, 4);
-            firstNameTextBox.Name = "firstNameTextBox";
-            firstNameTextBox.Size = new Size(109, 27);
-            firstNameTextBox.TabIndex = 7;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.firstNameTextBox.Location = new System.Drawing.Point(140, 70);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(96, 23);
+            this.firstNameTextBox.TabIndex = 7;
             // 
             // ProductsPage
             // 
-            ProductsPage.BackColor = Color.MediumAquamarine;
-            ProductsPage.Controls.Add(productInsertButton);
-            ProductsPage.Controls.Add(productUpdateButton);
-            ProductsPage.Controls.Add(productDeleteButton);
-            ProductsPage.Controls.Add(label7);
-            ProductsPage.Controls.Add(nameTextBox);
-            ProductsPage.Location = new Point(4, 29);
-            ProductsPage.Margin = new Padding(3, 4, 3, 4);
-            ProductsPage.Name = "ProductsPage";
-            ProductsPage.Padding = new Padding(3, 4, 3, 4);
-            ProductsPage.Size = new Size(901, 301);
-            ProductsPage.TabIndex = 1;
-            ProductsPage.Text = "Products";
+            this.ProductsPage.BackColor = System.Drawing.Color.Transparent;
+            this.ProductsPage.Controls.Add(this.productInsertButton);
+            this.ProductsPage.Controls.Add(this.productUpdateButton);
+            this.ProductsPage.Controls.Add(this.productDeleteButton);
+            this.ProductsPage.Controls.Add(this.label7);
+            this.ProductsPage.Controls.Add(this.nameTextBox);
+            this.ProductsPage.Location = new System.Drawing.Point(4, 29);
+            this.ProductsPage.Name = "ProductsPage";
+            this.ProductsPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.ProductsPage.Size = new System.Drawing.Size(787, 221);
+            this.ProductsPage.TabIndex = 1;
+            this.ProductsPage.Text = "Products";
             // 
             // productInsertButton
             // 
-            productInsertButton.BackColor = Color.FromArgb(0, 192, 0);
-            productInsertButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            productInsertButton.Location = new Point(277, 229);
-            productInsertButton.Margin = new Padding(3, 4, 3, 4);
-            productInsertButton.Name = "productInsertButton";
-            productInsertButton.Size = new Size(127, 45);
-            productInsertButton.TabIndex = 21;
-            productInsertButton.Text = "Insert";
-            productInsertButton.UseVisualStyleBackColor = false;
-            productInsertButton.Click += productInsertButton_Click;
+            this.productInsertButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.productInsertButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productInsertButton.Location = new System.Drawing.Point(242, 172);
+            this.productInsertButton.Name = "productInsertButton";
+            this.productInsertButton.Size = new System.Drawing.Size(111, 34);
+            this.productInsertButton.TabIndex = 21;
+            this.productInsertButton.Text = "Insert";
+            this.productInsertButton.UseVisualStyleBackColor = false;
             // 
             // productUpdateButton
             // 
-            productUpdateButton.BackColor = Color.Yellow;
-            productUpdateButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            productUpdateButton.Location = new Point(410, 229);
-            productUpdateButton.Margin = new Padding(3, 4, 3, 4);
-            productUpdateButton.Name = "productUpdateButton";
-            productUpdateButton.Size = new Size(127, 45);
-            productUpdateButton.TabIndex = 22;
-            productUpdateButton.Text = "Update ()";
-            productUpdateButton.UseVisualStyleBackColor = false;
-            productUpdateButton.Click += productUpdateButton_Click;
+            this.productUpdateButton.BackColor = System.Drawing.Color.Yellow;
+            this.productUpdateButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productUpdateButton.Location = new System.Drawing.Point(359, 172);
+            this.productUpdateButton.Name = "productUpdateButton";
+            this.productUpdateButton.Size = new System.Drawing.Size(111, 34);
+            this.productUpdateButton.TabIndex = 22;
+            this.productUpdateButton.Text = "Update ()";
+            this.productUpdateButton.UseVisualStyleBackColor = false;
             // 
             // productDeleteButton
             // 
-            productDeleteButton.BackColor = Color.Red;
-            productDeleteButton.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            productDeleteButton.Location = new Point(543, 229);
-            productDeleteButton.Margin = new Padding(3, 4, 3, 4);
-            productDeleteButton.Name = "productDeleteButton";
-            productDeleteButton.Size = new Size(127, 45);
-            productDeleteButton.TabIndex = 23;
-            productDeleteButton.Text = "Delete ()";
-            productDeleteButton.UseVisualStyleBackColor = false;
-            productDeleteButton.Click += deleteButton_Click;
+            this.productDeleteButton.BackColor = System.Drawing.Color.Red;
+            this.productDeleteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productDeleteButton.Location = new System.Drawing.Point(475, 172);
+            this.productDeleteButton.Name = "productDeleteButton";
+            this.productDeleteButton.Size = new System.Drawing.Size(111, 34);
+            this.productDeleteButton.TabIndex = 23;
+            this.productDeleteButton.Text = "Delete ()";
+            this.productDeleteButton.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(28, 41);
-            label7.Name = "label7";
-            label7.Size = new Size(52, 20);
-            label7.TabIndex = 18;
-            label7.Text = "Name:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(24, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 15);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Name:";
             // 
             // nameTextBox
             // 
-            nameTextBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            nameTextBox.Location = new Point(128, 38);
-            nameTextBox.Margin = new Padding(3, 4, 3, 4);
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(115, 27);
-            nameTextBox.TabIndex = 15;
+            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameTextBox.Location = new System.Drawing.Point(112, 28);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(101, 23);
+            this.nameTextBox.TabIndex = 15;
             // 
             // OrdersPage
             // 
-            OrdersPage.BackColor = Color.Turquoise;
-            OrdersPage.Controls.Add(label18);
-            OrdersPage.Location = new Point(4, 29);
-            OrdersPage.Margin = new Padding(3, 4, 3, 4);
-            OrdersPage.Name = "OrdersPage";
-            OrdersPage.Size = new Size(901, 301);
-            OrdersPage.TabIndex = 2;
-            OrdersPage.Text = "Report";
+            this.OrdersPage.BackColor = System.Drawing.Color.Transparent;
+            this.OrdersPage.Controls.Add(this.label18);
+            this.OrdersPage.Location = new System.Drawing.Point(4, 29);
+            this.OrdersPage.Name = "OrdersPage";
+            this.OrdersPage.Size = new System.Drawing.Size(787, 221);
+            this.OrdersPage.TabIndex = 2;
+            this.OrdersPage.Text = "Report";
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.Location = new Point(25, 34);
-            label18.Name = "label18";
-            label18.Size = new Size(524, 120);
-            label18.TabIndex = 20;
-            label18.Text = "    Таблица Orders служит для хранения заказов и имеет следующие поля:\r\n- Id\r\n- WorkerId\r\n- Price\r\n- CreationDate\r\n- PaymentDate\r\n";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(22, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(414, 90);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "    Таблица Orders служит для хранения заказов и имеет следующие поля:\r\n- Id\r\n- W" +
+    "orkerId\r\n- Price\r\n- CreationDate\r\n- PaymentDate\r\n";
             // 
             // OrdersProductsPage
             // 
-            OrdersProductsPage.BackColor = Color.SlateBlue;
-            OrdersProductsPage.Controls.Add(label16);
-            OrdersProductsPage.Location = new Point(4, 29);
-            OrdersProductsPage.Margin = new Padding(3, 4, 3, 4);
-            OrdersProductsPage.Name = "OrdersProductsPage";
-            OrdersProductsPage.Size = new Size(901, 301);
-            OrdersProductsPage.TabIndex = 3;
-            OrdersProductsPage.Text = "OrdersProducts";
+            this.OrdersProductsPage.BackColor = System.Drawing.Color.Transparent;
+            this.OrdersProductsPage.Controls.Add(this.label16);
+            this.OrdersProductsPage.Location = new System.Drawing.Point(4, 29);
+            this.OrdersProductsPage.Name = "OrdersProductsPage";
+            this.OrdersProductsPage.Size = new System.Drawing.Size(787, 221);
+            this.OrdersProductsPage.TabIndex = 3;
+            this.OrdersProductsPage.Text = "OrdersProducts";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(25, 34);
-            label16.Name = "label16";
-            label16.Size = new Size(562, 100);
-            label16.TabIndex = 20;
-            label16.Text = "    Таблица OrdersProducts служит для хранения товаров в заказе и имеет поля:\r\n- OrderId\r\n- ProductrId\r\n- QuantityProduct\r\n- PricePRoducts\r\n";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(22, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(442, 75);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "    Таблица OrdersProducts служит для хранения товаров в заказе и имеет поля:\r\n- " +
+    "OrderId\r\n- ProductrId\r\n- QuantityProduct\r\n- PricePRoducts\r\n";
             // 
-            // statusStrip1
+            // tabPage1
             // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1 });
-            statusStrip1.Location = new Point(0, 904);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(982, 26);
-            statusStrip1.TabIndex = 0;
-            statusStrip1.Text = "statusStrip1";
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(787, 221);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Отчеты";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // toolStripStatusLabel1
+            // button1
             // 
-            toolStripStatusLabel1.ForeColor = SystemColors.Highlight;
-            toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            toolStripStatusLabel1.Size = new Size(129, 20);
-            toolStripStatusLabel1.Text = "Number of row(s):";
+            this.button1.BackColor = System.Drawing.Color.SlateBlue;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(21, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 47);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Отчет по работникам";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // button2
             // 
-            panel1.BackColor = Color.DarkOrchid;
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(982, 125);
-            panel1.TabIndex = 1;
+            this.button2.BackColor = System.Drawing.Color.SlateBlue;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(203, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 47);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Отчет по статьям затрат";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.DarkOrchid;
-            label1.Font = new Font("Lucida Fax", 22.2F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(35, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(251, 42);
-            label1.TabIndex = 0;
-            label1.Text = "Предприятие";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(21, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 15);
+            this.label1.TabIndex = 21;
+            this.label1.Text = " Отчёты по статьям затрат и сотрудникам.";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 676);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(859, 22);
+            this.statusStrip1.TabIndex = 0;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(104, 17);
+            this.toolStripStatusLabel1.Text = "Number of row(s):";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 675);
+            this.panel1.TabIndex = 1;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(38, 524);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 24;
-            dataGridView1.Size = new Size(905, 279);
-            dataGridView1.TabIndex = 5;
-            dataGridView1.CellClick += dataGridView1_CellClick;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 321);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(792, 268);
+            this.dataGridView1.TabIndex = 5;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(982, 930);
-            Controls.Add(tabControl1);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel1);
-            Controls.Add(statusStrip1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1";
-            Text = "Предпиятие";
-            tabControl1.ResumeLayout(false);
-            CustomersPage.ResumeLayout(false);
-            CustomersPage.PerformLayout();
-            ProductsPage.ResumeLayout(false);
-            ProductsPage.PerformLayout();
-            OrdersPage.ResumeLayout(false);
-            OrdersPage.PerformLayout();
-            OrdersProductsPage.ResumeLayout(false);
-            OrdersProductsPage.PerformLayout();
-            statusStrip1.ResumeLayout(false);
-            statusStrip1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(859, 698);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.statusStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "Form1";
+            this.Text = "Предпиятие";
+            this.tabControl1.ResumeLayout(false);
+            this.CustomersPage.ResumeLayout(false);
+            this.CustomersPage.PerformLayout();
+            this.ProductsPage.ResumeLayout(false);
+            this.ProductsPage.PerformLayout();
+            this.OrdersPage.ResumeLayout(false);
+            this.OrdersPage.PerformLayout();
+            this.OrdersProductsPage.ResumeLayout(false);
+            this.OrdersProductsPage.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -405,7 +422,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button customerInsertButton;
         private System.Windows.Forms.Button customerUpdateButton;
         private System.Windows.Forms.Button customerDeleteButton;
@@ -428,6 +444,10 @@
         private System.Windows.Forms.Button productDeleteButton;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
+        private TabPage tabPage1;
+        private Button button1;
+        private Button button2;
+        private Label label1;
     }
 }
 

@@ -29,7 +29,7 @@ namespace OnlineStore
         {
             var endpoint = "grpcs://ydb.serverless.yandexcloud.net:2135";
             var database = "/ru-central1/b1gdr3lhj3btpt3e9nm7/etn150im3qu5qd6iq8gf";
-            var token = "t1.9euelZqdz5zGzpaYkY2Mx5ONnJycm-3rnpWax5Wdm8-ayMealI6MzM6eiY3l8_c-FAhR-e99I3hh_N3z935CBVH5730jeGH8zef1656VmpzHk5ydmIyTzYqJzM6Mz8-Q7_zN5_XrnpWax5bHm5rMic_PmI-Qi5CLmczv_cXrnpWanMeTnJ2YjJPNionMzozPz5A.JbH2x2VVLQ0ZjmCAKiGC7BwWOIcUgugEG5wnvAuyO4-f7YDaPRyRQS7txl8QyKxhwBl0BZusxYo09isrIcgbBQ";
+            var token = "t1.9euelZrOk43KicuLiZvLnpmNjpiXle3rnpWayJSSi5SZzJmYnsuPmJuKj8vl9PcyIxpQ-e9wHHKb3fT3clEXUPnvcBxym83n9euelZqNj47KncjKy8aTnZmLyZ2RmO_8xeuelZqNj47KncjKy8aTnZmLyZ2RmA.PFcVz04PisFCTXZ7EAni0tW3r3TNkuJnsaZew1oa6Hf-9JGVZvKQyvY1aXGflnCCbQHZtLkl03fd7ndbcaw0BA";
 
             var config = new DriverConfig(
                 endpoint: endpoint,
@@ -85,9 +85,9 @@ namespace OnlineStore
             {
                 case "Worker":
                     dt.Columns.Add("Id", typeof(ulong));
-                    dt.Columns.Add("FirstName", typeof(string));
-                    dt.Columns.Add("LastName", typeof(string));
-                    dt.Columns.Add("MiddleName", typeof(string));
+                    dt.Columns.Add("Имя", typeof(string));
+                    dt.Columns.Add("Фамилия", typeof(string));
+                    dt.Columns.Add("Отчество", typeof(string));
                     foreach (var row in resultSet.Rows)
                     {
                         dt.Rows.Add((ulong?)row["Id"], (string?)row["FirstName"],
@@ -96,7 +96,7 @@ namespace OnlineStore
                     break;
                 case "Products":
                     dt.Columns.Add("Id", typeof(ulong));
-                    dt.Columns.Add("Name", typeof(string));
+                    dt.Columns.Add("Статья затрат", typeof(string));
                     foreach (var row in resultSet.Rows)
                     {
                         dt.Rows.Add((ulong?)row["Id"], (string?)row["Name"]);
@@ -104,10 +104,10 @@ namespace OnlineStore
                     break;
                 case "Report":
                     dt.Columns.Add("Id", typeof(ulong));
-                    dt.Columns.Add("CustomerId", typeof(ulong));
-                    dt.Columns.Add("Price", typeof(ulong));
-                    dt.Columns.Add("CreationDate", typeof(DateTime));
-                    dt.Columns.Add("PaymentDate", typeof(DateTime));
+                    dt.Columns.Add("Id покупателя", typeof(ulong));
+                    dt.Columns.Add("Сумма", typeof(ulong));
+                    dt.Columns.Add("Дата создания отчета", typeof(DateTime));
+                    dt.Columns.Add("Дата Оплаты", typeof(DateTime));
                     foreach (var row in resultSet.Rows)
                     {
                         dt.Rows.Add((ulong?)row["Id"], (ulong?)row["CustomerId"],
@@ -117,10 +117,10 @@ namespace OnlineStore
                     }
                     break;
                 case "OrdersProducts":
-                    dt.Columns.Add("OrderId", typeof(ulong));
-                    dt.Columns.Add("ProductId", typeof(ulong));
-                    dt.Columns.Add("Price", typeof(ulong));
-                    dt.Columns.Add("Quantity", typeof(ulong));
+                    dt.Columns.Add("Id Заказа", typeof(ulong));
+                    dt.Columns.Add("Id Продукта", typeof(ulong));
+                    dt.Columns.Add("Сумма", typeof(ulong));
+                    dt.Columns.Add("Количкство", typeof(ulong));
                     foreach (var row in resultSet.Rows)
                     {
                         dt.Rows.Add((ulong?)row["OrderId"], (ulong?)row["ProductId"],
@@ -434,7 +434,95 @@ namespace OnlineStore
             loadData();
             resetMe();
         }
+        private async void ReportWorker_Click(object sender, EventArgs e)
+        {
+            dt.Clear();
+            dt = new DataTable();
+            var tableClient = new TableClient(driver, new TableClientConfig());
 
-       
+            var response = await tableClient.SessionExec(async session =>
+            {
+                var query = @$"SELECT * FROM WorkersReport";
+
+                return await session.ExecuteDataQuery(
+                query: query,
+                txControl: TxControl.BeginSerializableRW().Commit()
+                );
+            });
+            response.Status.EnsureSuccess();
+            var queryResponse = (ExecuteDataQueryResponse)response;
+            var resultSet = queryResponse.Result.ResultSets[0];
+
+
+
+            dt.Columns.Add("Id", typeof(ulong));
+            dt.Columns.Add("Фамилия", typeof(string));
+            dt.Columns.Add("Имя", typeof(string));
+            dt.Columns.Add("Отчество", typeof(string));
+            dt.Columns.Add("Налог", typeof(ulong));
+            dt.Columns.Add("Сумма с налогом", typeof(ulong));
+
+            foreach (var row in resultSet.Rows)
+            {
+                dt.Rows.Add((ulong?)row["Id"], (string?)row["LastName"],
+                    (string?)row["FirstName"], (string?)row["MiddleName"],
+                    (ulong?)row["Nalog"], (ulong?)row["Price"]);
+            }
+
+            DataGridView dgv1 = dataGridView1;
+
+            dgv1.MultiSelect = false;
+            dgv1.AutoGenerateColumns = true;
+            dgv1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgv1.DataSource = dt;
+
+            dgv1.Columns[0].Width = 55;
+        }
+
+        private async void ReportProduct_Click(object sender, EventArgs e)
+        {
+         
+            dt = new DataTable();
+            dt.Clear();
+            var tableClient = new TableClient(driver, new TableClientConfig());
+
+            var response = await tableClient.SessionExec(async session =>
+            {
+                var query = @$"SELECT * FROM ZProductReport";
+
+                return await session.ExecuteDataQuery(
+                query: query,
+                txControl: TxControl.BeginSerializableRW().Commit()
+                );
+            });
+            response.Status.EnsureSuccess();
+            var queryResponse = (ExecuteDataQueryResponse)response;
+            var resultSet = queryResponse.Result.ResultSets[0];
+
+
+
+            dt.Columns.Add("Id", typeof(ulong));
+            dt.Columns.Add("Статья затрат", typeof(string));
+            dt.Columns.Add("ФИО сотрудника", typeof(string));
+            dt.Columns.Add("Товаров на сумму", typeof(ulong));
+            foreach (var row in resultSet.Rows)
+            {
+                dt.Rows.Add((ulong?)row["Id"], (string?)row["ProductName"], (string?)row["WorkerFullName"],
+                    (ulong?)row["PriceProducts"]);
+            }
+
+            DataGridView dgv1 = dataGridView1;
+
+            dgv1.MultiSelect = false;
+            dgv1.AutoGenerateColumns = true;
+            dgv1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgv1.DataSource = dt;
+
+            dgv1.Columns[2].Width = 250;
+            dgv1.Columns[0].Width = 55;
+        }
+
     }
 }
